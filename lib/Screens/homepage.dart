@@ -11,7 +11,38 @@ class HomePage extends StatelessWidget {
         title: Text("Home"),
         elevation: 0,
       ),
-      drawer: Drawer(),
+      drawer: Drawer(
+  child: ListView(
+    children: <Widget>[
+      UserAccountsDrawerHeader(
+  accountName: Text("Sarvesh Kale"),
+  accountEmail: Text("sarvesh.kale@gmail.com"),
+  currentAccountPicture: CircleAvatar(
+    backgroundColor:
+        Theme.of(context).platform == TargetPlatform.iOS
+            ? Colors.blue
+            : Colors.white,
+    child: Text(
+      "A",
+      style: TextStyle(fontSize: 40.0),
+    ),
+  ),
+),
+      ListTile(
+        title: Text("All Diseases"),
+        trailing: Icon(Icons.arrow_forward),
+      ),
+      ListTile(
+        title: Text("Notification"),
+        trailing: Icon(Icons.arrow_forward),
+      ),
+      ListTile(
+        title: Text("About"),
+        trailing: Icon(Icons.arrow_forward),
+      ),
+    ],
+  ),
+),
       body: Container(
         decoration: BoxDecoration(
           color: Colors.white,
