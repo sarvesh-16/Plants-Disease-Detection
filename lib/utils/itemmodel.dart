@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:plants_disease_detector/Helpers/diseasemodel.dart';
+import 'package:plants_disease_detector/utils/diseasemodel.dart';
 
 class Item extends StatelessWidget {
   final String title, photo, description, solution;
